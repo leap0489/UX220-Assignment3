@@ -1,8 +1,7 @@
-class BorderElement extends HTMLElement{
+class YearElement extends HTMLElement{
     connectedCallback(){
-        this.innerHTML = `<div style="border-color: white; border-width=4px; border-radius=8px">${this.innerHTML}</div>`
-        ;
+        this.innerHTML = new Date().getFullYear();
     }
 }
 
-customElements.define("x-border", BorderElement);
+customElements.define("x-fullyear",YearElement);
